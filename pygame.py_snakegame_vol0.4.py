@@ -29,14 +29,14 @@ while True:
             pg.quit()
             sys.exit()
         if event.type == pg.KEYDOWN:
-            if event.key == pg.K_w:
+            if event.key == pg.K_r:
                 snake_dir = (0, -TITLE_SIZE)
-            if event.key == pg.K_s:
-                snake_dir = (0, -TITLE_SIZE)
-            if event.key == pg.K_a:
-                snake_dir = (-TITLE_SIZE, 0)
+            if event.key == pg.K_c:
+                snake_dir = (0, TITLE_SIZE)
             if event.key == pg.K_d:
                 snake_dir = (-TITLE_SIZE, 0)
+            if event.key == pg.K_f:
+                snake_dir = (TITLE_SIZE, 0)
 
     screen.fill('black')
 
@@ -66,3 +66,4 @@ while True:
 
     pg.display.flip()
     clock.tick(60)
+
